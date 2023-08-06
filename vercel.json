@@ -1,14 +1,19 @@
 {
   "version": 2,
   "builds": [
-    { "src": "./backend/src/server.js", "use": "@vercel/node-server" }
+    {
+      "src": "app/backend/src/server.js",
+      "use": "@now/node-server"
+    },
+    {
+      "src": "app/frontend/package.json",
+      "use": "@vercel/static"
+    }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "app/backend/src/server.js" }
-  ],
-  "env": {
-    "MONGO_URI": "mongodb+srv://ricardokds:kgdFdbzgXJS1WnlF@cluster0.7pfuoq1.mongodb.net/BOOKS_DB?retryWrites=true&w=majority",
-    "JWT_SECRET_KEY": "asimov",
-    "BCRYPT_SECRET_KEY": "10"
-  }
+      {
+          "src": "/api/.*",
+          "dest": "app/backend/src/server.js"
+      }
+  ]
 }
