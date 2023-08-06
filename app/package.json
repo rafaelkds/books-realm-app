@@ -1,0 +1,8 @@
+{
+  "name": "books_realm",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}
