@@ -19,5 +19,10 @@
           "src": "/(.*)",
           "dest": "/index.html"
       }
-  ]
+  ],
+  "env": {
+    "MONGO_URI": "mongodb+srv://ricardokds:kgdFdbzgXJS1WnlF@cluster0.7pfuoq1.mongodb.net/BOOKS_DB?retryWrites=true&w=majority",
+    "JWT_SECRET_KEY": "asimov",
+    "BCRYPT_SECRET_KEY": "10"
+  }
 }
